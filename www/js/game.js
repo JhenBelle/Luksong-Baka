@@ -1,0 +1,46 @@
+var width = 800;
+var height = 600;
+var bgAudio;
+var bgSound;
+var audioLoop;
+var bounds = 7995;
+var cursors;
+var keyboard;
+var scoreText, gameOverText, bestText;
+var fbg, fbg3, fbg4;
+var player;
+var rat;
+var tinik;
+var tiniks;
+var seas;
+var sea;
+var ssea,sseas;
+var block;
+var blocks;
+var killRat;
+var btnplay;
+var play;
+var btnrestart;
+var restart;
+var btnpause;
+var pause;
+var btnUp;
+var up;
+var btnLeft;
+var left;
+var btnRight;
+var right,score = 0, Scores=0;
+var coin, coins, bg;
+
+var game = new Phaser.Game(width, height, Phaser.CANVAS, '');
+
+game.state.add("boot",boot);
+game.state.add("preload",preload);
+game.state.add("menu",menu);
+game.state.add("play",play);
+// game.state.add("update",update);
+// game.state.add("kill",kill);
+// game.state.add("win",win);
+// game.state.add("lose",lose);
+
+game.state.start("boot");
